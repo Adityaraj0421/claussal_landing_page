@@ -19,6 +19,21 @@ const inter = Inter({
 export const metadata = {
     title: 'Claussal - Autonomous Legal AI',
     description: 'The agentic AI partner for modern legal teams using precision, autonomous redlining, and risk scoring.',
+    openGraph: {
+        title: 'Claussal - Autonomous Legal AI',
+        description: 'The agentic AI partner for modern legal teams using precision, autonomous redlining, and risk scoring.',
+        url: 'https://claussal.ai',
+        siteName: 'Claussal',
+        locale: 'en_US',
+        type: 'website',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Claussal - Autonomous Legal AI',
+        description: 'The agentic AI partner for modern legal teams using precision, autonomous redlining, and risk scoring.',
+        creator: '@claussalai',
+    },
+    metadataBase: new URL('https://claussal.ai'),
 };
 
 export default function RootLayout({ children }) {

@@ -2,7 +2,6 @@
 
 import { useWaitlist } from '../context/WaitlistContext';
 import styles from './Hero.module.css';
-import Image from 'next/image';
 import posthog from 'posthog-js';
 import { motion, AnimatePresence } from 'framer-motion';
 

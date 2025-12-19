@@ -1,15 +1,17 @@
+import dynamic from 'next/dynamic';
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Workflow from '@/components/Workflow';
-import CoreIntelligence from '@/components/CoreIntelligence';
-import ComplianceShield from '@/components/ComplianceShield';
-import ComparisonTable from '@/components/ComparisonTable';
-import Security from '@/components/Security';
-import FAQ from '@/components/FAQ';
-import Footer from '@/components/Footer';
 import Reveal from '@/components/Reveal';
-
 import WaitlistModal from '@/components/WaitlistModal';
+
+// Lazy load below-the-fold components
+const Workflow = dynamic(() => import('@/components/Workflow'));
+const CoreIntelligence = dynamic(() => import('@/components/CoreIntelligence'));
+const ComplianceShield = dynamic(() => import('@/components/ComplianceShield'));
+const ComparisonTable = dynamic(() => import('@/components/ComparisonTable'));
+const Security = dynamic(() => import('@/components/Security'));
+const FAQ = dynamic(() => import('@/components/FAQ'));
+const Footer = dynamic(() => import('@/components/Footer'));
 
 export default function Home() {
     return (
