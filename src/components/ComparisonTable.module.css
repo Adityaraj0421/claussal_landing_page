@@ -38,11 +38,24 @@
 .tableContainer {
     overflow-x: auto;
     padding: 20px 10px;
-    /* Space for shadow */
+    background:
+        /* Shadow covers */
+        linear-gradient(to right, #F9F9F7 30%, rgba(249, 249, 247, 0)),
+        linear-gradient(to right, rgba(249, 249, 247, 0), #F9F9F7 70%) 0 100%,
+        /* Shadows */
+        radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+        radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+    background-repeat: no-repeat;
+    background-color: #F9F9F7;
+    background-size: 40px 100%, 40px 100%, 14px 100%, 14px 100%;
+    background-position: 0 0, 100% 0, 0 0, 100% 0;
+    background-attachment: local, local, scroll, scroll;
 }
 
 .table {
     width: 100%;
+    min-width: 650px;
+    /* Force scroll on mobile */
     border-collapse: separate;
     border-spacing: 0;
     text-align: left;
@@ -113,5 +126,13 @@
     .table td {
         padding: 16px;
         font-size: 0.9rem;
+    }
+
+    .tableContainer {
+        margin-right: -24px;
+        padding-right: 24px;
+        /* Bleed to edge */
+        mask-image: linear-gradient(to right, black 90%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, black 90%, transparent 100%);
     }
 }

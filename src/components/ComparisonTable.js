@@ -12,7 +12,7 @@ export default function ComparisonTable() {
                 <p className={styles.subtitle}>General models optimize for conversation. Claussal is engineered for legal fact.</p>
             </div>
 
-            <div className={styles.tableWrapper}>
+            <div className={styles.tableContainer}>
                 <table className={styles.table}>
                     <thead>
                         <tr>

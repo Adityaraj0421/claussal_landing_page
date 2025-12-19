@@ -239,7 +239,45 @@
 }
 
 @media (max-width: 768px) {
+    .heroSection {
+        padding: 100px 0 60px;
+    }
+
     .headline {
         font-size: 40px;
+        line-height: 1.1;
+    }
+
+    .subheadline {
+        font-size: 16px;
+        padding: 0 16px;
+    }
+
+    .ctaGroup {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 40px;
+    }
+
+    .ctaGroup button,
+    .ctaGroup a {
+        width: 100%;
+        max-width: 280px;
+        justify-content: center;
+    }
+
+    .mockupBody {
+        padding: 20px;
+    }
+
+    .clauseNumber {
+        margin-top: 16px;
+        font-size: 14px;
+    }
+
+    /* Prevent text squashing in mockup */
+    .interfaceMockup {
+        min-width: 300px;
     }
 }
