@@ -1,0 +1,215 @@
+/* [project]/src/components/ComplianceShield.module.css [app-client] (css) */
+.ComplianceShield-module__0jtiSa__grid {
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 80px;
+  display: grid;
+}
+
+.ComplianceShield-module__0jtiSa__content {
+  max-width: 540px;
+}
+
+.ComplianceShield-module__0jtiSa__badge {
+  font-family: var(--font-mono);
+  color: var(--foreground);
+  background: #fff;
+  border-radius: 0;
+  margin-bottom: 24px;
+  padding: 6px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  display: inline-block;
+  box-shadow: 0 1px 3px #0000001a;
+}
+
+.ComplianceShield-module__0jtiSa__title {
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  letter-spacing: -.02em;
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.ComplianceShield-module__0jtiSa__description {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.ComplianceShield-module__0jtiSa__features {
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__features li {
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__check {
+  color: #1f4e3d;
+  font-weight: bold;
+}
+
+.ComplianceShield-module__0jtiSa__visual {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__calendarCard {
+  background: #fff;
+  border-radius: 0;
+  width: 100%;
+  max-width: 420px;
+  padding: 32px;
+  box-shadow: 0 20px 25px -5px #0000001a, 0 10px 10px -5px #0000000a;
+}
+
+.ComplianceShield-module__0jtiSa__calendarHeader {
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__dot {
+  background: #c1440e;
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  animation: 2s infinite ComplianceShield-module__0jtiSa__pulser;
+}
+
+.ComplianceShield-module__0jtiSa__liveStatus {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  color: var(--foreground);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ComplianceShield-module__0jtiSa__dateDisplay {
+  border-bottom: 1px solid var(--border);
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__dateInfo {
+  align-items: baseline;
+  gap: 12px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__todayLabel {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.ComplianceShield-module__0jtiSa__todayDate {
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.ComplianceShield-module__0jtiSa__eventList {
+  flex-direction: column;
+  gap: 16px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__eventItem {
+  align-items: flex-start;
+  gap: 16px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__eventTime {
+  font-family: var(--font-mono);
+  color: var(--text-secondary);
+  min-width: 65px;
+  padding-top: 2px;
+  font-size: 13px;
+}
+
+.ComplianceShield-module__0jtiSa__eventDetail {
+  flex-direction: column;
+  flex: 1;
+  gap: 6px;
+  display: flex;
+}
+
+.ComplianceShield-module__0jtiSa__eventTitle {
+  font-family: var(--font-sans);
+  color: var(--foreground);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.ComplianceShield-module__0jtiSa__eventTag {
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  border-radius: 0;
+  align-self: flex-start;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.ComplianceShield-module__0jtiSa__eventItem:first-child .ComplianceShield-module__0jtiSa__eventTag {
+  color: #c1440e;
+  background: #fef2f2;
+}
+
+.ComplianceShield-module__0jtiSa__eventItem:nth-child(2) .ComplianceShield-module__0jtiSa__eventTag {
+  color: #1f4e3d;
+  background: #ecfdf5;
+}
+
+@keyframes ComplianceShield-module__0jtiSa__pulser {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  50% {
+    opacity: .5;
+    transform: scale(1.5);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .ComplianceShield-module__0jtiSa__grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+}
+
+/*# sourceMappingURL=src_components_ComplianceShield_module_css_bad6b30c._.single.css.map*/

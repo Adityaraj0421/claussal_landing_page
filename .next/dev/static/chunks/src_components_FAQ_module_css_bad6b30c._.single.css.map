@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/src/components/FAQ.module.css"],"sourcesContent":[".sectionTitle {\n    font-size: 32px;\n    margin-bottom: 40px;\n    text-align: center;\n    color: var(--foreground);\n}\n\n.faqList {\n    display: flex;\n    flex-direction: column;\n}\n\n.faqItem {\n    border-bottom: 1px solid var(--border);\n}\n\n.question {\n    width: 100%;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 24px 0;\n    background: none;\n    border: none;\n    text-align: left;\n    font-family: var(--font-serif);\n    font-size: 20px;\n    color: var(--foreground);\n    cursor: pointer;\n}\n\n.icon {\n    font-family: var(--font-sans);\n    font-size: 24px;\n    font-weight: 300;\n    color: var(--accent);\n}\n\n.answer {\n    padding-bottom: 24px;\n    color: var(--text-secondary);\n    line-height: 1.6;\n    animation: slideDown 0.2s ease-out;\n}\n\n@keyframes slideDown {\n    from {\n        opacity: 0;\n        transform: translateY(-10px);\n    }\n\n    to {\n        opacity: 1;\n        transform: translateY(0);\n    }\n}"],"names":[],"mappings":"AAAA;;;;;;;AAOA;;;;;AAKA;;;;AAIA;;;;;;;;;;;;;;;AAeA;;;;;;;AAOA;;;;;;;AAOA"}}]
+}

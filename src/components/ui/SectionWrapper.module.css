@@ -1,0 +1,26 @@
+.section {
+    padding: 80px 0;
+    width: 100%;
+    background-color: var(--bg-primary);
+    position: relative;
+    /* Ensure no paper texture if overridden by secondary */
+}
+
+.secondary {
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 60px 0;
+    }
+}

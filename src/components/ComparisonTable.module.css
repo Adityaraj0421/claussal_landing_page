@@ -1,0 +1,117 @@
+.section {
+    background-color: #F9F9F7;
+    /* Alabaster */
+    padding: 100px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    line-height: 1.1;
+    margin-bottom: 24px;
+    color: var(--foreground);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.tableContainer {
+    overflow-x: auto;
+    padding: 20px 10px;
+    /* Space for shadow */
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    text-align: left;
+}
+
+.table th {
+    padding: 24px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-secondary);
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.table td {
+    padding: 24px;
+    font-size: 1.125rem;
+    border-bottom: 1px solid #E5E7EB;
+    color: var(--foreground);
+}
+
+/* Feature Column */
+.table td:first-child {
+    font-weight: 500;
+    width: 30%;
+}
+
+/* Manual Column (Middle) */
+.table th:nth-child(2),
+.table td:nth-child(2) {
+    color: var(--text-secondary);
+    width: 35%;
+}
+
+/* Claussal Column Styling - Brand Green Highlight */
+.claussalCol {
+    color: #1F4E3D !important;
+    /* Brand Green */
+    background: white;
+    border-top: 1px solid #1F4E3D;
+    border-left: 1px solid #1F4E3D;
+    border-right: 1px solid #1F4E3D;
+    border-radius: 0;
+    position: relative;
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+}
+
+.claussalCell {
+    background: white;
+    border-left: 1px solid #1F4E3D;
+    border-right: 1px solid #1F4E3D;
+    border-bottom: 1px solid #E5E7EB;
+    /* Standard separator for internal cells */
+    font-weight: 600;
+    color: var(--foreground);
+}
+
+/* Fix bottom border/radius for the last cell */
+.table tr:last-child .claussalCell {
+    border-bottom: 1px solid #1F4E3D !important;
+    border-radius: 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+
+    .table th,
+    .table td {
+        padding: 16px;
+        font-size: 0.9rem;
+    }
+}

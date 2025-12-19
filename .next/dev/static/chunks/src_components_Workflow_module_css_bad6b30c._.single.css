@@ -1,0 +1,154 @@
+/* [project]/src/components/Workflow.module.css [app-client] (css) */
+.Workflow-module__ltJKRG__workflowSection {
+  padding: 20px 0;
+  position: relative;
+}
+
+.Workflow-module__ltJKRG__header {
+  text-align: center;
+  max-width: 600px;
+  margin-bottom: 60px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Workflow-module__ltJKRG__title {
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  letter-spacing: -.02em;
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.Workflow-module__ltJKRG__subtitle {
+  font-family: var(--font-sans);
+  color: var(--text-secondary);
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.Workflow-module__ltJKRG__timeline {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  padding-top: 40px;
+  display: grid;
+  position: relative;
+}
+
+.Workflow-module__ltJKRG__track {
+  opacity: 1;
+  z-index: 0;
+  background: none;
+  border-top: 1px dashed #ffffff4d;
+  height: 1px;
+  position: absolute;
+  top: 105px;
+  left: 0;
+  right: 0;
+}
+
+.Workflow-module__ltJKRG__step {
+  z-index: 1;
+  background-color: var(--foreground);
+  border: 1px solid var(--foreground);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 100%;
+  padding: 32px;
+  transition: all .3s;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.Workflow-module__ltJKRG__step:after {
+  content: "";
+  pointer-events: none;
+  border: 1px solid #ffffff26;
+  position: absolute;
+  inset: 12px;
+}
+
+.Workflow-module__ltJKRG__step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px #0b2b1e33;
+}
+
+.Workflow-module__ltJKRG__iconWrapper {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: #ffffff0d;
+  border: 1px solid #fff3;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  width: 64px;
+  height: 64px;
+  margin-bottom: 24px;
+  transition: transform .2s;
+  display: flex;
+}
+
+.Workflow-module__ltJKRG__iconWrapper:hover {
+  background: #ffffff1a;
+  transform: translateY(-2px);
+}
+
+.Workflow-module__ltJKRG__icon {
+  color: #fff;
+  width: 32px;
+  height: 32px;
+}
+
+.Workflow-module__ltJKRG__content {
+  padding-right: 20px;
+}
+
+.Workflow-module__ltJKRG__stepId {
+  font-family: var(--font-mono);
+  color: #fff9;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  display: block;
+}
+
+.Workflow-module__ltJKRG__stepTitle {
+  font-family: var(--font-serif);
+  color: #fff;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.Workflow-module__ltJKRG__stepDesc {
+  font-family: var(--font-sans);
+  color: #fffc;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .Workflow-module__ltJKRG__timeline {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .Workflow-module__ltJKRG__track {
+    display: none;
+  }
+
+  .Workflow-module__ltJKRG__header {
+    margin-bottom: 40px;
+  }
+
+  .Workflow-module__ltJKRG__iconWrapper {
+    margin-bottom: 16px;
+  }
+}
+
+/*# sourceMappingURL=src_components_Workflow_module_css_bad6b30c._.single.css.map*/

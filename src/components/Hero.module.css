@@ -1,0 +1,245 @@
+.heroSection {
+    padding: 120px 0 100px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    /* Contain the aurora */
+}
+
+/* Aurora Background Effect */
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140%;
+    height: 1000px;
+    background: radial-gradient(circle at center, rgba(16, 185, 129, 0.08) 0%, rgba(59, 130, 246, 0.08) 30%, transparent 70%);
+    filter: blur(60px);
+    z-index: -1;
+    pointer-events: none;
+    animation: auroraPulse 15s ease-in-out infinite alternate;
+}
+
+@keyframes auroraPulse {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.8;
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+.headline {
+    font-size: 64px;
+    margin-bottom: 24px;
+    color: var(--foreground);
+    letter-spacing: -1px;
+    position: relative;
+}
+
+.subheadline {
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 600px;
+    margin: 0 auto 40px;
+    line-height: 1.6;
+    position: relative;
+}
+
+.floatingSymbol {
+    position: absolute;
+    color: var(--accent);
+    font-family: 'Times New Roman', serif;
+    font-style: italic;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.dynamicTerm {
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.ctaGroup {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.visualContainer {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* For floating badges */
+}
+
+.interfaceMockup {
+    width: 100%;
+    max-width: 1200px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    /* Deeper Shadow for "Wow" factor */
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    text-align: left;
+    border-radius: 0px;
+    /* Sharp corners */
+    position: relative;
+    z-index: 10;
+}
+
+
+.mockupHeader {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot:nth-child(1) {
+    background-color: #C1440E;
+    /* Burnt Orange */
+}
+
+.dot:nth-child(2) {
+    background-color: #D97706;
+    /* Amber */
+}
+
+.dot:nth-child(3) {
+    background-color: #1F4E3D;
+    /* Matte Emerald */
+}
+
+.mockupBody {
+    padding: 40px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    color: var(--text-secondary);
+    position: relative;
+    /* For scan line positioning */
+    overflow: hidden;
+}
+
+/* Live Redline Styles */
+/* Live Redline Styles */
+.clauseNumber {
+    font-weight: 600;
+    color: var(--foreground);
+    margin-bottom: 8px;
+    margin-top: 24px;
+}
+
+.clauseNumber:first-child {
+    margin-top: 0;
+}
+
+.riskyContainer {
+    position: relative;
+    display: inline-block;
+    white-space: pre;
+}
+
+.riskyText {
+    color: var(--text-secondary);
+}
+
+.redline {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    height: 2px;
+    background-color: #C1440E;
+    /* Brand Matte Red/Orange */
+    transform: translateY(-50%);
+    opacity: 0.8;
+}
+
+.suggestionBlock {
+    margin: 12px 0 24px;
+    padding-left: 12px;
+    border-left: 2px solid #1F4E3D;
+    /* Brand Matte Emerald */
+    overflow: hidden;
+}
+
+.aiLabel {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #1F4E3D;
+    /* Brand Matte Emerald */
+    margin-bottom: 4px;
+}
+
+.suggestionText {
+    font-family: 'Courier New', Courier, monospace;
+    /* Distinct "Code/Edit" feel */
+    color: var(--foreground);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.windowControls {
+    display: flex;
+    gap: 8px;
+}
+
+.scanStatus {
+    margin-left: auto;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 99px;
+    display: flex;
+    align-items: center;
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+.separator {
+    height: 1px;
+    background-color: var(--border);
+    margin: 32px 0;
+    opacity: 0.5;
+}
+
+.warningBadge {
+    position: absolute;
+    top: -24px;
+    right: 0;
+    background-color: #C1440E;
+    /* Brand Matte Red/Orange */
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 0px;
+    white-space: nowrap;
+    box-shadow: 0 2px 4px rgba(239, 68, 68, 0.2);
+    z-index: 20;
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 40px;
+    }
+}

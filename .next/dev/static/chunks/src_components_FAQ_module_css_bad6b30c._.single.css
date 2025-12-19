@@ -1,0 +1,59 @@
+/* [project]/src/components/FAQ.module.css [app-client] (css) */
+.FAQ-module__V8_xEa__sectionTitle {
+  text-align: center;
+  color: var(--foreground);
+  margin-bottom: 40px;
+  font-size: 32px;
+}
+
+.FAQ-module__V8_xEa__faqList {
+  flex-direction: column;
+  display: flex;
+}
+
+.FAQ-module__V8_xEa__faqItem {
+  border-bottom: 1px solid var(--border);
+}
+
+.FAQ-module__V8_xEa__question {
+  text-align: left;
+  width: 100%;
+  font-family: var(--font-serif);
+  color: var(--foreground);
+  cursor: pointer;
+  background: none;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 0;
+  font-size: 20px;
+  display: flex;
+}
+
+.FAQ-module__V8_xEa__icon {
+  font-family: var(--font-sans);
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.FAQ-module__V8_xEa__answer {
+  color: var(--text-secondary);
+  padding-bottom: 24px;
+  line-height: 1.6;
+  animation: .2s ease-out FAQ-module__V8_xEa__slideDown;
+}
+
+@keyframes FAQ-module__V8_xEa__slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=src_components_FAQ_module_css_bad6b30c._.single.css.map*/

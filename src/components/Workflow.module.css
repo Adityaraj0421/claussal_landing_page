@@ -1,0 +1,156 @@
+.workflowSection {
+    position: relative;
+    padding: 20px 0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    font-family: var(--font-serif);
+    font-size: 48px;
+    color: var(--foreground);
+    margin-bottom: 24px;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    padding-top: 40px;
+    /* Space for the icon to float up */
+}
+
+.track {
+    position: absolute;
+    top: 105px;
+    /* Pixel-perfect center: 40px (timeline) + 1px (border) + 32px (pad) + 32px (half-icon) = 105px */
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: transparent;
+    border-top: 1px dashed rgba(255, 255, 255, 0.3);
+    opacity: 1;
+    z-index: 0;
+}
+
+.step {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--foreground);
+    /* Dark Paper Texture */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    border: 1px solid var(--foreground);
+    padding: 32px;
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.step::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    pointer-events: none;
+}
+
+.step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(11, 43, 30, 0.2);
+}
+
+.iconWrapper {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    transition: transform 0.2s ease;
+    backdrop-filter: blur(4px);
+}
+
+.iconWrapper:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    color: #FFFFFF;
+}
+
+.content {
+    padding-right: 20px;
+}
+
+.stepId {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.stepTitle {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    color: #FFFFFF;
+    margin-bottom: 12px;
+    font-weight: 400;
+}
+
+.stepDesc {
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .track {
+        display: none;
+    }
+
+    .header {
+        margin-bottom: 40px;
+    }
+
+    .iconWrapper {
+        margin-bottom: 16px;
+    }
+}
