@@ -3,6 +3,7 @@ import './globals.css';
 import './globals.css';
 import Providers from '@/components/Providers';
 import Intercom from '@/components/Intercom';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const playfair = Playfair_Display({
     subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function RootLayout({ children }) {
                     {children}
                     <Intercom />
                 </Providers>
+                <SpeedInsights />
             </body>
         </html>
     );
