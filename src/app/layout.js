@@ -1,6 +1,7 @@
 import { Playfair_Display, Inter } from 'next/font/google';
 import './globals.css';
 import './globals.css';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import Providers from '@/components/Providers';
 import Intercom from '@/components/Intercom';
 
@@ -43,6 +44,7 @@ export default function RootLayout({ children }) {
                 <Providers>
                     {children}
                     <Intercom />
+                    <SpeedInsights />
                 </Providers>
             </body>
         </html>
